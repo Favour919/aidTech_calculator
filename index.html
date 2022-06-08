@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="on-container">
+                <div class="on-wrapper">
+                    <i class="fas fa-bars"></i>
+                    <p>Standard</p>
+                </div>
+                <i class="fas fa-clock-rotate-left"></i>
+            </div>
+            <div class="display">
+                <p id="number-display"></p>
+                <p id="result-display">0</p>
+            </div>
+            <div class="main-wrapper">
+                <div class="sign-wrapper">
+                    <div class="sign-button min mini1 miniclc">MC</div>
+                    <div class="sign-button min mini3">MR</div>
+                    <div class="sign-button selector1">M+</div>
+                    <div class="sign-button selector">M-</div>
+                    <div class="sign-button selector2">MS</div>
+                    <div class="sign-button min mini2"><p>M <sup><i class="fas fa-angle-down"></i></sup></p></div>
+               </div>
+               <div class="number-wrapper">
+                   <button type="button" value="%" class="percentage">%</button>
+                   <button type="button" value=""class="squareroot">&radic;</button>
+                   <button type="button" value="" class="square">x<sup><small>2</small></sup></button>
+                   <button type="button" value="" class="divideby"><sup><small>1</small></sup>/<sub>x</sub></button>
+                   <button type="button" value="" id="clear">CE</button>
+                   <button type="button" value="" id="clear2">C</button>
+                   <button type="button" value="" class="delete"><img src="backspace.svg" alt=""></button>
+                   <button type="button" value="/"  class="operator">&divide;</button>
+                   <button type="button" value="7" class="number">7</button>
+                   <button type="button" value="8" class="number">8</button>
+                   <button type="button" value="9" class="number">9</button>
+                   <button type="button" value="*"  class="operator">x</button>
+                   <button type="button" value="4" class="number">4</button>
+                   <button type="button" value="5" class="number">5</button>
+                   <button type="button" value="6" class="number">6</button>
+                   <button type="button" value="-"  class="operator">-</button>
+                   <button type="button" value="1" class="number">1</button>
+                   <button type="button" value="2" class="number">2</button>
+                   <button type="button" value="3" class="number">3</button>
+                   <button type="button" value="+"  class="operator">+</button>
+                   <button type="button" value=""  class="negate">&#177;</button>
+                   <button type="button" value="0" class="number">0</button>
+                   <button type="button" value="." class="dot">.</button>
+                   <button type="button" value="="  class="operator" id="equal">=</button>
+              </div>
+            </div>
+            
+        </section>
+    </main>
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>

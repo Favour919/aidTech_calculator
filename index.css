@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    width: 100%;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    max-width: 500px;
+    margin:  30px auto;
+    background-color: rgb(226, 226, 226);
+    box-shadow: 0px 0px 10px rgba(111, 109, 109, 0.294);
+    display: grid;
+    gap: 20px;
+    padding-top: 40px;
+}
+.on-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555;
+    padding: 0 15px;
+}
+
+.on-wrapper{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+img{
+    width: 30px;
+}
+button{
+    border: 1px solid #d8d7d7;
+    background-color:rgb(226, 226, 226);
+    height: 72px;
+    font-size: 23px;
+    font-weight: lighter;
+    outline: none;
+    user-select: none;
+}
+.display{
+    height: 190px;
+    font-size:40px ;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding-right: 20px;
+    align-items: end;
+    box-shadow: inset 0px 0px 10px rgba(205, 199, 199, 0.001);
+}
+.main-wrapper{
+    display: grid;
+    gap: 2px;
+    padding: 5px;
+}
+#number-display{
+    color: rgb(130, 127, 127);
+    height: 30px;
+    font-size: 20px;
+}
+.number-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 2px;
+}
+.sign-wrapper{
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+    gap: 2px;
+}
+
+.sign-button{
+    /* border: 1px solid rgb(209, 204, 204); */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.sign-button:hover{
+    background-color: rgb(202, 196, 196);
+    color: rgb(6, 6, 6);
+    transition: .3s;
+}
+.min{
+    color: rgb(187, 182, 182);
+    background-color: transparent;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+.min:hover{
+    background-color: unset;
+    color: rgb(187, 182, 182);
+}
+.selector , .selector1 ,.selector2{
+    cursor: default;
+}
+.dot{
+   font-size: 30px;
+   font-weight: bold;
+}
+.operator:hover{
+    background-color: rgba(155, 48, 255, 0.725);
+    color: white;
+}
+.number {
+    background-color: rgb(236, 230, 230);
+}
+button:hover{
+    background-color: rgb(202, 196, 196);
+}
