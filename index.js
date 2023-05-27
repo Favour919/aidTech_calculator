@@ -2,7 +2,7 @@ const displayResult = document.querySelector('#number-display');
 
 const display = document.querySelector('#result-display')
 
-
+let result = false
 
 const dot = document.querySelector('.dot')
     let doSet = false;
@@ -20,7 +20,9 @@ dot.addEventListener('click', function () {
 
 });
 
-
+function calc(fn) {
+    return new Function('return ' + fn)()
+}
 
 const keys = document.querySelectorAll('.number');
 
@@ -45,6 +47,31 @@ operators.forEach(function (sign) {
         displayResult.textContent += display.textContent + " " + sign.textContent + " "
         newDigit = true
         doSet = false
+        
+        let val = displayResult.textContent;
+
+        if (val.includes("×")) {
+            val = val.replaceAll('×', '*');
+        
+        }
+        if (val.includes("−")) {
+            val = val.replaceAll('−', '-');
+        
+        }
+        
+        if (val.includes("÷")) {
+            val = val.replaceAll('÷', '/');
+        }
+
+        
+        val = val.slice(0, -2)
+
+        if (result == true) {
+            displayResult.textContent = display.textContent + " " + sign.textContent + " " 
+        }
+        result = false
+        // screenDisplay()
+        display.textContent = calc(val);
     })
 });
 
@@ -54,7 +81,7 @@ clear.addEventListener('click', function reset() {
     display.textContent = "0"
     doSet = false
 });
-const clear2 = document.querySelector('#clear2')
+const clear2 = document.querySelector('#clear2');
 
 clear2.addEventListener('click', function clearScreen() {
     display.textContent = "0"
@@ -77,6 +104,9 @@ deleteNum.addEventListener('click', function () {
         } else {
             display.innerText = "0";
         }
+        if (result = false) {
+            
+        }
 
     }
 
@@ -89,7 +119,6 @@ const percentage = document.querySelector('.percentage')
 percentage.addEventListener('click', function () {
     display.textContent *= display.textContent / 100;
     newDigit = true
-    
 })
 
 const square = document.querySelector('.square')
@@ -131,17 +160,31 @@ negate.addEventListener('click', function () {
     }
     display.textContent *= -1;
 })
-
+ 
 const equal = document.querySelector('#equal');
-function calc(fn) {
-    return new Function('return ' + fn)()
-}
+
 equal.addEventListener('click', function () {
-    value = displayResult.textContent + display.textContent;
-    // console.log(displa)
-    display.textContent = ""
-    display.textContent = calc(value)
-    displayResult.textContent = value + "=" 
+    let val = displayResult.textContent;
+    // console.log(val);
+
+    let equalSign = val.charAt(val.length - 2);
+
+    val = val.replace(equalSign, "")
+    
+    if (val.includes("×")) {
+        val = val.replaceAll('×', '*');
+        
+    }
+    if (val.includes("−")) {
+        val = val.replaceAll('−', '-');
+        
+    }
+
+    if (val.includes("÷")) {
+        val = val.replaceAll('÷', '/');
+    }
+    result = true;
+    display.textContent = calc(val);
 })
  
 
@@ -153,17 +196,20 @@ const selector = document.querySelector('.selector1')
 const selector1 = document.querySelector('.selector')
 const selector2 = document.querySelector('.selector2')
 
-    selector.addEventListener('click', function () {
+selector.addEventListener('click', function () {
+        
         mini.classList.replace  ("min", "asdf")
         mini1.classList.replace  ("min", "asdf")
         mini2.classList.replace  ("min", "asdf")
     })
-    selector1.addEventListener('click', function () {
+selector1.addEventListener('click', function () {
+        
         mini.classList.replace  ("min", "asdf")
         mini1.classList.replace  ("min", "asdf")
         mini2.classList.replace  ("min", "asdf")
     })
-    selector2.addEventListener('click', function () {
+selector2.addEventListener('click', function () {
+        
         mini.classList.replace  ("min", "asdf")
         mini1.classList.replace  ("min", "asdf")
         mini2.classList.replace  ("min", "asdf")
@@ -173,9 +219,14 @@ const selector2 = document.querySelector('.selector2')
         mini1.classList.replace  ("asdf", "min")
         mini2.classList.replace  ("asdf", "min")
     })
+ 
+    
 
-
-
+// function screenDisplay() {
+//     if (display.textContent > 13) {
+//         display.textContent.slice(0, 10)
+//     }
+// }
    
 
 

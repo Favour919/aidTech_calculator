@@ -23,7 +23,10 @@ main{
     color: #555;
     padding: 0 15px;
 }
-
+/* .number-display-wapper{
+    height: 30px;
+    overflow-x: auto;
+} */
 .on-wrapper{
     display: flex;
     gap: 20px;
@@ -31,7 +34,7 @@ main{
 }
 
 img{
-    width: 30px;
+    width: 25px;
 }
 button{
     border: 1px solid #d8d7d7;
@@ -50,6 +53,7 @@ button{
     justify-content:center;
     padding-right: 20px;
     align-items: end;
+    overflow-x: auto;
     box-shadow: inset 0px 0px 10px rgba(205, 199, 199, 0.001);
 }
 .main-wrapper{
@@ -58,8 +62,9 @@ button{
     padding: 5px;
 }
 #number-display{
+    overflow-x: auto;
     color: rgb(130, 127, 127);
-    height: 30px;
+    /* height: 50px; */
     font-size: 20px;
 }
 .number-wrapper{
@@ -114,5 +119,5 @@ button{
     background-color: rgb(236, 230, 230);
 }
 button:hover{
-    background-color: rgb(202, 196, 196);
+    background-color: rgb(207, 202, 202);
 }
